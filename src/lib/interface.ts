@@ -11,4 +11,11 @@ export interface simpleBlogCard {
     content: any;
     titleImage: any;
   }
+  // types/sanity.d.ts
+interface SanityConfig {
+  projectId: string
+  dataset: string
+  apiVersion: string
+  useCdn?: boolean
+}
   

@@ -10,3 +10,6 @@ export default defineConfig({
   basePath: '/admin',
   plugins: [deskTool()],
 })
+
+// Cek apakah environment variables terbaca
+console.log('Project ID:', process.env.NEXT_PUBLIC_SANITY_PROJECT_ID)
