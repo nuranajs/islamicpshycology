@@ -1,14 +1,14 @@
 // sanity.config.ts
 import { defineConfig } from 'sanity'
 import { deskTool } from 'sanity/desk'
-
+import { visionTool } from '@sanity/vision'
 export default defineConfig({
-  projectId: '8elj67zb', // Ganti dengan Project ID Anda
-  dataset: 'production',
-  apiVersion: '2024-01-15',
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
+  apiVersion: '2024-02-25',
   title: 'profile',
   basePath: '/admin',
-  plugins: [deskTool()],
+  plugins: [deskTool(), visionTool()],
 })
 
 // Cek apakah environment variables terbaca
