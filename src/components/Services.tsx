@@ -2,7 +2,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { client } from '@/sanity/lib/client'
+import { client } from '@/lib/client'
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { motion } from "framer-motion";
 
@@ -41,7 +41,7 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            {services.map((service) => (
+            {services.map((service: any) => (
               <Card key={service._id}>
                 <CardHeader>
                 <CardTitle>{service.title}</CardTitle>

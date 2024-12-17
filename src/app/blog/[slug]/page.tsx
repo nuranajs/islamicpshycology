@@ -1,4 +1,4 @@
-import { client, urlFor } from "@/sanity/lib/client";
+import { client, urlFor } from "@/lib/client";
 import { PortableText } from "@portabletext/react";
 import { fullBlog } from "@/lib/interface";
 import Image from "next/image";
@@ -26,7 +26,7 @@ export default async function BlogArticle({
   const data: fullBlog = await getData(params.slug);
 
   return (
-    <div className="mt-16">
+    <div className="container mx-auto px-4 mt-20">
       <h1>
         <span className="block text-base text-center text-primary font-semibold tracking-wide uppercase">
           Indonesia Islam Psikolog Society - Program

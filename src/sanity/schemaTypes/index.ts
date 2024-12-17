@@ -1,13 +1,8 @@
 import { type SchemaTypeDefinition } from 'sanity'
+import blog from './blog'
 import heroCarousel from './heroCarousel'
 import services from './services'
-import blog from './blog'
 
-const schemaTypes = [heroCarousel, services, blog]
-
-export default {
-  types: schemaTypes as SchemaTypeDefinition[]
+export const schema: { types: SchemaTypeDefinition[] } = {
+  types: [blog, heroCarousel, services],
 }
-
-
-

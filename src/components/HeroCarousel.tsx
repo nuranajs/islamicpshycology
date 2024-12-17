@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import Image from "next/image"
-import { urlFor } from "@/sanity/lib/client"
+import { urlFor } from "@/lib/client"
 import { Card, CardContent } from "@/components/ui/card"
 import {
   Carousel,

@@ -1,10 +1,10 @@
 import Services from '@/components/Services';
-import Projects from '@/components/Projects';
 import { groq } from 'next-sanity';
-import { client } from '@/sanity/lib/client';
+import { client } from '@/lib/client';
 import HeroCarousel from '@/components/HeroCarousel';
 import About from '@/components/About';
 import { FooterSection } from '@/components/Footer';
+import Projects from '@/components/Projects';
 
 // Tambahkan revalidate
 export const revalidate = 0 // revalidate at most every hour

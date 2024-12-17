@@ -1,7 +1,7 @@
 // components/ProjectShowcase.tsx
 "use client"
 import { Button } from "@/components/ui/button"
-import { urlFor } from '@/sanity/lib/client';
+import { urlFor } from  "@/lib/client"
 import { motion } from "framer-motion";
 import {
   Card,
@@ -13,11 +13,11 @@ import {
 } from "@/components/ui/card"
 import Image from "next/image"
 import Link from "next/link"
-import { client } from "@/sanity/lib/client"
+import { client } from "@/lib/client"
 
 async function getData() {
   const query = `
-  *[_type == 'blog'] | order(_createdAt desc) {
+    *[_type == 'blog'] | order(_createdAt desc) {
     title,
       smallDescription,
       "currentSlug": slug.current,
@@ -53,7 +53,7 @@ export default async function Projects() {
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {data.map((post, idx) => (
+          {data.map((post: any, idx: any) => (
             <Card key={idx} className="group overflow-hidden">
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
