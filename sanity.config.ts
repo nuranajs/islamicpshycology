@@ -11,7 +11,6 @@ export default defineConfig({
   apiVersion,
   plugins: [deskTool(), visionTool()],
   schema: {
-    types: schemaTypes,
+    types: schemaTypes, 
   },
- 
 })
