@@ -3,7 +3,6 @@ import { groq } from 'next-sanity';
 import { client } from '@/lib/client';
 import HeroCarousel from '@/components/HeroCarousel';
 import About from '@/components/About';
-import { FooterSection } from '@/components/Footer';
 import Projects from '@/components/Projects';
 
 // Tambahkan revalidate
@@ -30,7 +29,7 @@ export default async function Home() {
       <About />
       <Services />
       <Projects />
-      <FooterSection />
+     
     </main>
   )
 }

@@ -26,15 +26,17 @@ export default async function BlogArticle({
   const data: fullBlog = await getData(params.slug);
 
   return (
-    <div className="container mx-auto px-4 mt-20">
-      <h1>
-        <span className="block text-base text-center text-primary font-semibold tracking-wide uppercase">
-          Indonesia Islam Psikolog Society - Program
+    <div className="container mx-auto px-4">
+      <div className="mt-16">
+        <h1>
+          <span className="mb-4 block text-base text-center text-primary font-semibold tracking-wide uppercase">
+            Indonesia Islam Psikolog Society - Program
         </span>
         <span className="mt-10 block text-3xl items-center leading-8 font-bold tracking-tight sm:text-4xl">
           {data.title}
         </span>
       </h1>
+      </div>
 
       <Image
         src={urlFor(data.titleImage).url()}
@@ -42,12 +44,13 @@ export default async function BlogArticle({
         height={300}
         alt="Title Image"
         priority
-        className="rounded-lg mt-5 border"
+        className="rounded-lg mt-5 border items-center"
       />
 
-      <div className="mt-5 text-left">
+      <div className="mt-5 text-left mb-5">
         <PortableText value={data.content} />
       </div>
     </div>
   );
 }
+

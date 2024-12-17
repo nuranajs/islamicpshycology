@@ -4,6 +4,8 @@ import './globals.css'
 import Navbar from '@/components/Navbar'
 import ScrollToTop from '@/components/ScrolltoTop'
 import { Toaster } from "@/components/ui/toaster"
+import { FooterSection } from '@/components/Footer';
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -23,6 +25,7 @@ export default function RootLayout({
         {children}
         <ScrollToTop />
         <Toaster />
+        <FooterSection />
       </body>
     </html>
   )
