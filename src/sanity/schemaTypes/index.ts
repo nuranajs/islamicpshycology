@@ -3,6 +3,8 @@ import blog from './blog'
 import heroCarousel from './heroCarousel'
 import services from './services'
 
-export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [blog, heroCarousel, services],
+export const schemaTypes = [blog, heroCarousel, services]
+
+export const schema = {
+  types: [blog, heroCarousel, services] as SchemaTypeDefinition[]
 }
