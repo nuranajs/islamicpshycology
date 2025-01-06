@@ -2,7 +2,7 @@
 import { defineConfig } from 'sanity'
 import { deskTool } from 'sanity/desk'
 import { visionTool } from '@sanity/vision'
-import { apiVersion, dataset, projectId } from '@/lib/env'
+import { apiVersion, dataset, projectId } from './src/lib/env'
 import { schemaTypes } from './src/sanity/schemaTypes'
 export default defineConfig({
   basePath: '/admin',
